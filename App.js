@@ -5,11 +5,10 @@
  */
 
 import React, { Component } from 'react';
-import {
-  Platform
-} from 'react-native';
+import { Platform, View } from 'react-native';
 
 import Header from './src/components/Header';
+import AlbumList from './src/components/AlbumList';
 
 // const instructions = Platform.select({
 //   ios: 'Press Cmd+R to reload,\n' +
@@ -21,7 +20,10 @@ import Header from './src/components/Header';
 export default class App extends Component<{}> {
   render() {
     return (
-      <Header />
+      <View>
+        <Header headerText={'Albums'} />
+        <AlbumList />
+      </View>
     );
   }
 }
